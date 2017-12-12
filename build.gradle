@@ -3,6 +3,7 @@ buildscript {
         springBootVersion = "1.4.2.RELEASE"
         springVersion = "4.3.4.RELEASE"
         hibernateVersion = "5.0.11.Final"
+        mysqlVersion = "5.1.40"
         slf4jVersion = "1.7.21"
         junitVersion = "4.12"
     }
@@ -52,4 +53,10 @@ task dependenciesGraph(dependsOn: "dependenciesGraphDot", type: Exec) {
 
 task clean(type: Delete) {
     delete "build"
+}
+
+task deploy {
+    doLast {
+        println "cf push".execute().text
+    }
 }
