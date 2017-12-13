@@ -33,7 +33,7 @@ public class MovieServlet extends HttpServlet {
 
     public static int PAGE_SIZE = 5;
 
-    private MoviesClient moviesClient;
+    private static MoviesClient moviesClient;
 
     public MovieServlet(MoviesClient moviesClient) {
         this.moviesClient = moviesClient;

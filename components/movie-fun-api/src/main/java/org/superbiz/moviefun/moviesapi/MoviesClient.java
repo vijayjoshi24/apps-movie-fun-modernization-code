@@ -10,8 +10,8 @@ import static org.springframework.http.HttpMethod.GET;
 
 public class MoviesClient {
 
-    private String moviesUrl;
-    private RestOperations restOperations;
+    private static String moviesUrl;
+    private static RestOperations restOperations;
 
     private static ParameterizedTypeReference<List<MovieInfo>> movieListType = new ParameterizedTypeReference<List<MovieInfo>>() {
     };
