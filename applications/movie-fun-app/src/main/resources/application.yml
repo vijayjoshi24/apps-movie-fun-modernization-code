@@ -2,6 +2,8 @@ spring:
   mvc.view:
     prefix: /WEB-INF/
     suffix: .jsp
+  application:
+      name: movie-fun-app-sso
 
 logging.level:
   root: WARN
@@ -20,3 +22,4 @@ movies:
 security:
   basic:
     enabled: false
+
